@@ -107,6 +107,11 @@ OS_COLD
 extern void
 _os_crash_fmt(os_log_pack_t, size_t);
 
+OS_COLD
+API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+extern void
+_os_crash_msg(const char *, char *);
+
 /*!
  * @function os_assert_sprintf
  * A routine to assert the result of a call to snprintf(3) or vsnprintf(3).
